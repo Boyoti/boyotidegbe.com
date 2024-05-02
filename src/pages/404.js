@@ -1,49 +1,24 @@
-import * as React from "react"
-import { Link } from "gatsby"
+import React from 'react'
+import Helmet from 'react-helmet'
 
-const pageStyles = {
-  color: "#232129",
-  padding: "96px",
-  fontFamily: "-apple-system, Roboto, sans-serif, serif",
-}
-const headingStyles = {
-  marginTop: 0,
-  marginBottom: 64,
-  maxWidth: 320,
-}
+import { Layout } from '../components/Layout'
+import { SEO } from '../components/SEO'
+import { Hero } from '../components/Hero'
 
-const paragraphStyles = {
-  marginBottom: 48,
-}
-const codeStyles = {
-  color: "#8A6534",
-  padding: 4,
-  backgroundColor: "#FFF4DB",
-  fontSize: "1.25rem",
-  borderRadius: 4,
-}
+import config from '../utils/config'
 
-const NotFoundPage = () => {
+export default function FourOhFour() {
   return (
-    <main style={pageStyles}>
-      <h1 style={headingStyles}>Page not found</h1>
-      <p style={paragraphStyles}>
-        Sorry 😔, we couldn’t find what you were looking for.
-        <br />
-        {process.env.NODE_ENV === "development" ? (
-          <>
-            <br />
-            Try creating a page in <code style={codeStyles}>src/pages/</code>.
-            <br />
-          </>
-        ) : null}
-        <br />
-        <Link to="/">Go home</Link>.
-      </p>
-    </main>
+    <div>
+      <Helmet title={`404 | ${config.siteTitle}`} />
+      <SEO />
+      <div className="container">
+        <Hero title="404">
+          <p className="hero-description">Sorry, page not found.</p>
+        </Hero>
+      </div>
+    </div>
   )
 }
 
-export default NotFoundPage
-
-export const Head = () => <title>Not found</title>
+FourOhFour.Layout = Layout
