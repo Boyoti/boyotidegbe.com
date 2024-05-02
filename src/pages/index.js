@@ -44,7 +44,7 @@ export default function Index({ data }) {
           {/* My Own Image */}
           <div className="decoration">
             <img
-              src="/boyoti.jpeg"
+              src="/boyoti.png"
               alt="Boyoti E. DEGBE"
               className="image hero-image"
               title="Boyoti E. DEGBE"
