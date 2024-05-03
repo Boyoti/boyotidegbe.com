@@ -47,7 +47,7 @@ export function appendComments() {
 
   commentScript.async = true
   commentScript.src = 'https://utteranc.es/client.js'
-  commentScript.setAttribute('repo', 'boyoti/comments')
+  commentScript.setAttribute('repo', 'Boyoti/boyotidegbe.com')
   commentScript.setAttribute('issue-term', 'pathname')
   commentScript.setAttribute('id', 'utterances')
   commentScript.setAttribute(
